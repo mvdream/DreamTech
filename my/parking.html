@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>DreamTech</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+       
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+			function phonenumber(inputtxt)
+				{
+				  var phoneno = /^\d{10}$/;
+				  if(inputtxt.value.match(phoneno))
+				  {
+					  return true;
+				  }
+				  else
+				  {
+					 document.getElementById("mobile_val").innerHtml="Enter valid mobile no";
+					 return false;
+				  }
+				  }
+		</script>
+    </head>
+    <body>
+        
+           
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">DreamTech</a>
+                </div><ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Topics
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Java</a></li>
+          <li><a href="#">Python</a></li>
+          <li><a href="#">Machine Learning</a></li>
+          <li><a href="#">C language</a></li>
+          <li><a href="#">R language</a></li>
+        </ul>
+    </li>
+
+                
+                    
+                </div>
+            </div>
+        </nav> 
+        <div class="container-fluid">
+            <div class="rows">
+                <div class="col-md-1"></div>
+
+                <div class="col-md-10">
+
+                    <div class="col-md-2">
+                        <div class="sidenav">
+					   <a href="home.php">Home</a></span>
+                       <a href="profile.php">Profile</a></span>
+                       <a href="booking.php">Booking</a></span>
+                       <a href="booking_info.php">Your Account</a>
+                       <a href="contact.php">Contact</a>
+                    </div> 
+                        
+                    </div>
+                    <div class="col-md-8">
+                        <h1>Welcome,</h1>
+                        <p>
+                            The proposed project is a smart parking 
+                            booking system that provides institutes 
+                            students an easy way of reserving a parking 
+                            space online using web portal.It overcomes the 
+                            problem of finding a parking space in universities/institute 
+                            areas that unnecessary consumes time.
+                            Hence, this project offers a web application based 
+                            reservation system where students can view 
+                            various parking spaces and select nearby or specific area 
+                            of their choice to view whether space is available or not.If the booking space is available, then 
+                            student can book it for specific time slot.The booked space will be marked and will not be available for anyone else for the specified time.
+                            This system provides an additional feature of canceling the bookings. Students can cancel their reserved space anytime.
+                            Students can also view previous parking booking details using the web portal.The proposed project is a smart parking 
+                            booking system that provides institutes 
+                            students an easy way of reserving a parking 
+                            space online using web portal.It overcomes the 
+                            problem of finding a parking space in universities/institute 
+                            areas that unnecessary consumes time.
+                            Hence, this project offers a web application based 
+                            reservation system where students can view 
+                            various parking spaces and select nearby or specific area 
+                            of their choice to view whether space is available or not.If the booking space is available, then 
+                            student can book it for specific time slot.The booked space will be marked and will not be available for anyone else for the specified time.
+                            This system provides an additional feature of canceling the bookings. Students can cancel their reserved space anytime.
+                            Students can also view previous parking booking details using the web portal.The proposed project is a smart parking 
+                            booking system that provides institutes 
+                            students an easy way of reserving a parking 
+                            space online using web portal.It overcomes the 
+                            problem of finding a parking space in universities/institute 
+                            areas that unnecessary consumes time.
+                            Hence, this project offers a web application based 
+                            reservation system where students can view 
+                            various parking spaces and select nearby or specific area 
+                            of their choice to view whether space is available or not.If the booking space is available, then 
+                            student can book it for specific time slot.The booked space will be marked and will not be available for anyone else for the specified time.
+                            This system provides an additional feature of canceling the bookings. Students can cancel their reserved space anytime.
+                            Students can also view previous parking booking details using the web portal.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="signup" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">Signup</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" name="signup" action="s_signup.php" method="POST" role="form">
+                                <div class="form-group"> 
+                                    <label for="name" class="control-label col-sm-3" >First Name :</label> 
+                                    <div class="col-sm-4">
+                                        <input type="text" name="f_name" class="form-control" placeholder="First Name" required > 
+                                    </div>
+                                </div> 
+                                <div class="form-group"> 
+                                    <label for="name"class="control-label col-sm-3" >Last Name :</label> 
+                                    <div class="col-sm-4">
+                                    <input type="text" name="l_name" class="form-control" placeholder="Last Name " required > 
+                                    </div>
+                                </div>
+                                <div class="form-group"> 
+                                    <label for="name"class="control-label col-sm-3" >Mobile No :</label> 
+                                    <div class="col-sm-4">
+                                    <input type="tel" name="mobile_no" class="form-control" placeholder="Mobile No" required > 
+                                    <h6 id="#mobile_val"></h6>
+									</div>
+                                </div> 
+                                <div class="form-group"> 
+                                    <label for="name"class="control-label col-sm-3" >Email Id :</label> 
+                                    <div class="col-sm-4">
+                                    <input type="email" name="email_id" class="form-control" placeholder="Email" required > 
+                                    </div>
+                                    </div> 
+                                <div class="form-group"> 
+                                    <label for="name"class="control-label col-sm-3" >Password :</label> 
+                                    <div class="col-sm-4">
+                                    <input type="password" name="password" class="form-control" placeholder="Password " required > 
+                                    </div>
+                                    
+                                    </div> 
+                                 <button type="submit" onclick="phonenumber(document.signup.password)">Signup</button> 
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="login_form" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">Login</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form action="s_login.php" method="POST" >
+                                <div class="form-group"> 
+                                    <label for="name">Username :</label> 
+                                    <input type="email" name="u_email_id" class="form-control" placeholder="Password " required > 
+                                </div> 
+                                <div class="form-group"> 
+                                    <label for="name">Password :</label> 
+                                    <input type="password" name="u_password" class="form-control" placeholder="Password " required > 
+                                </div> 
+                                <button type="submit">Login</button> 
+                            </form> 
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+     <div class="footer">
+		<div class="container-fluid">
+		<div class="footer-line">Copyright 2018 © DreamTech Pvt. Ltd. All Rights Reserved.</div>
+	 </div>  
+	 </div>
+    </body>
+</html>
