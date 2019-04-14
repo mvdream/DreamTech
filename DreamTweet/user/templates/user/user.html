@@ -1,0 +1,37 @@
+{% extends 'user/master.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<aside class="left-sidebar">
+     <div class="col-md-2">
+                        <div class="sidenav">
+						{% if users %}
+								<p><b>{{ topic }} USERS :</b></p>
+								{% for user,user_name in users %} 
+								<a href="{% url 'user:tweets' %}?user={{ user_name }}&topic={{ topic }}">-{{ user }} </a>
+								{% endfor %}
+						{% endif %}
+                    </div> 
+                        
+               </div>
+                 
+ </aside>
+                    <div class="col-md-8">
+                        {% if tweets %}
+							<div style="border:2px solid black;border-style:outset;margin:2px;padding:2px">
+								<p><b>Name</b> : {{ tweet_user }}</p>
+								<p><b> Positive Tweets:</b></p>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="{{ pos }}"aria-valuemin="0" aria-valuemax="100" style="width:{{ pos }}%;background-color:hsl(0,0%,25%)">
+									<span>{{ pos }}%</span>
+									</div>
+								</div>
+								<p> <b>Subject:</b> {{ topic }}</p>
+							</div>
+							<div style="margin:2px;padding:2px;background-color:hsl(0,0%,25%);color:white"><b>Tweets:</b></div>
+							{% for tweet in tweets %}
+								<div style="border-top:1px solid black;margin:2px;padding:2px"><p>{{ tweet }}</p></div>
+							{% endfor %}
+						{% endif %}
+                    </div>				
+    {% endblock %}
