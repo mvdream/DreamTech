@@ -39,10 +39,10 @@ def database_conn():
 	return engine
 
 def authenticate():
-	consumer_key = 'SZUDZDYA84m1lKw85sLG0q2fQ'
-	consumer_secret = 'MxsRHZ0Uvm09I1bchfgUWG5L7Lf75k9lG94nPbqYYsQsIgnWHl'
-	access_token = '1001898066624954368-NZSNQpEYNwN93ydqfSE2eh3e9s4r6O'
-	access_secret = '4dNZlRlaVWijLcbT3FOK2eYe4rk3monnJhC5qsEqXzoMD'
+	consumer_key = 'Your key'
+	consumer_secret = 'Your key'
+	access_token = 'Your key'
+	access_secret = 'Your key'
 	 
 	auth = OAuthHandler(consumer_key, consumer_secret)
 	auth.set_access_token(access_token, access_secret)
